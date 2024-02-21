@@ -1,0 +1,208 @@
+*, *::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+  font-family: "Ubuntu Mono", monospace, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #fff;
+}
+
+button{
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0 ;
+}
+
+.hover{
+  color: gray;
+}
+
+.button{
+  vertical-align: center;
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  padding: 0.75em 1.375em;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 3em;
+}
+
+.button.default{
+  background: #E0E0E0;
+  box-shadow: 1px 2px 4px 0 gray;
+  color: #3F3F3F;
+}
+
+.button.default-hover, .button.default:hover{
+  background: #AEAEAE;
+  box-shadow: 1px 2px 4px 0 rgb(183, 182, 182);
+  color: #3F3F3F;
+}
+
+.button.outline{
+  background: white;
+  border: 1px solid rgb(28, 77, 212);
+  color: #3D5AFE;
+}
+
+.button.outline-hover, .button.outline:hover{
+  background: rgba(114, 145, 229, 0.386);
+  border: 1px solid rgb(28, 77, 212);
+  color: #3D5AFE;
+}
+
+.button.text{
+  border: none;
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  color: rgb(28, 77, 212);
+}
+
+.button.text-hover, .button.text:hover{
+  border: none;
+  background-color: transparent;
+  color: rgb(28, 77, 212);
+  background: rgba(114, 145, 229, 0.386)
+}
+
+.button.primary{
+  background: rgb(28, 77, 212);
+  color: white;
+}
+
+.button.primary-hover, .button.primary:hover{
+  background: rgb(21, 62, 174);
+  color: white;
+}
+
+.button.secondary{
+ background: darkslategray;
+ color: white;
+}
+
+.button.secondary-hover, .button.secondary:hover{
+  background: rgb(33, 55, 55);
+  color: white;
+ }
+
+.button.danger{
+  background: rgb(204, 67, 46);
+  color: white;
+}
+
+.button.danger-hover, .button.danger:hover{
+  background: rgb(142, 45, 30);
+  color: white;
+}
+
+.disableShadow{
+  box-shadow: none;
+}
+
+.button.text:disabled{
+  color: gray;
+  background: none;
+}
+
+.button:disabled{
+  background: lightgray;
+}
+
+.start-icon{
+  margin-right: 10px;
+}
+
+.end-icon{
+  margin-left: 10px;
+}
+
+.button-sm{
+  padding: 6px 8px;
+}
+
+.button-lg{
+  padding: 15px 26px;
+}
+
+h3{
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #9E9E9E;
+  margin: 1.5em;
+}
+
+h3:hover{
+  color: #090F31;
+}
+
+h4{
+  margin: 4em 0 7em 0 ;
+}
+
+.container{
+  display: flex;
+}
+
+.content{
+  flex: 1;
+  margin: 4em 4em 4em 1em;
+}
+
+.sidebar-container{
+  background-color: #FAFBFD;
+  height: 100vh;
+  width:20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row{
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(20%, 1fr));
+  flex-wrap: wrap;
+}
+
+.x{
+  margin-top: 1em;
+}
+
+.footer{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.21;
+  text-align: center;
+  color: #828282;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1440px){
+
+  .row{
+    grid-template-columns:repeat(auto-fit, minmax(17%, 1fr));
+    grid-gap: 40px;
+  }
+}
